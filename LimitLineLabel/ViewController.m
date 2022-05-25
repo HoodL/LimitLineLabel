@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "LimitLabelTest1VC.h"
+#import "LimitLabelTest2VC.h"
 
 @interface ViewController ()
 @property(nonatomic, copy) NSArray *titleArr;
@@ -44,6 +45,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         LimitLabelTest1VC *vc = [[LimitLabelTest1VC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    if (indexPath.row == 1) {
+        LimitLabelTest2VC *vc = [[LimitLabelTest2VC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

@@ -12,8 +12,6 @@
 #define limitMaxLines  4
 
 @interface LimitLabelTableViewCell()
-@property(nonatomic, strong) UILabel *contentLabel;
-@property(nonatomic, copy) NSString *contentText;
 
 @end
 
@@ -54,8 +52,23 @@
         self.contentLabel.numberOfLines = 0;
         return;
     }
-    self.contentLabel.numberOfLines = limitMaxLines + 1;
-    [self.contentLabel updateLabel:self.contentLabel content:content frame:self.contentLabel.frame flagStr:@"%@全文"];
+//    self.contentLabel.numberOfLines = limitMaxLines + 1;
+//    [self.contentLabel updateLabel:self.contentLabel content:content frame:self.contentLabel.frame flagStr:@"%@全文"];
+    
+    NSMutableAttributedString *attri = [[NSMutableAttributedString alloc] initWithString:@"绿音富平柿饼500g独立包装抽真空霜降柿子饼"];
+    
+    // 添加表情
+    NSTextAttachment *attch = [[NSTextAttachment alloc] init];
+    
+    attch.image = [UIImage systemImageNamed:@"chevron.down"];
+    // 设置图片大小
+    attch.bounds = CGRectMake(0, 0, 16, 16);
+    
+    // 创建带有图片的富文本
+    NSAttributedString *string = [NSAttributedString attributedStringWithAttachment:attch];
+    [attri insertAttributedString:string atIndex:attri.length];
+    self.contentLabel.attributedText = attri;
+
 }
 
 - (void)foldAllData {

@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <YYKit/YYKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,6 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)foldAllData;
 
 @property(nonatomic, assign) BOOL isOpen;
+
+@property(nonatomic, strong) UILabel *contentLabel;
+@property(nonatomic, copy) NSString *contentText;
 
 @end
 

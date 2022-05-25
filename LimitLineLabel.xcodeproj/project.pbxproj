@@ -19,6 +19,9 @@
 		9C91AEB6283A67D000C9EF0E /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C91AEB3283A67CF00C9EF0E /* NSString+Util.m */; };
 		9C91AEB7283A67D000C9EF0E /* UILabel+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C91AEB5283A67D000C9EF0E /* UILabel+Util.m */; };
 		9C91AEBA283A6BC800C9EF0E /* LimitLabelTest1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C91AEB9283A6BC800C9EF0E /* LimitLabelTest1VC.m */; };
+		9CC67840283E45DC0009C8E8 /* LimitLabelTest2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6783F283E45DC0009C8E8 /* LimitLabelTest2VC.m */; };
+		9CC67843283E47920009C8E8 /* LimitLabelTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC67842283E47920009C8E8 /* LimitLabelTableViewCell2.m */; };
+		9CC67846283E484C0009C8E8 /* LimitLineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC67845283E484C0009C8E8 /* LimitLineLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,12 @@
 		9C91AEB5283A67D000C9EF0E /* UILabel+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Util.m"; sourceTree = "<group>"; };
 		9C91AEB8283A6BC800C9EF0E /* LimitLabelTest1VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LimitLabelTest1VC.h; sourceTree = "<group>"; };
 		9C91AEB9283A6BC800C9EF0E /* LimitLabelTest1VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LimitLabelTest1VC.m; sourceTree = "<group>"; };
+		9CC6783E283E45DC0009C8E8 /* LimitLabelTest2VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LimitLabelTest2VC.h; sourceTree = "<group>"; };
+		9CC6783F283E45DC0009C8E8 /* LimitLabelTest2VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LimitLabelTest2VC.m; sourceTree = "<group>"; };
+		9CC67841283E47920009C8E8 /* LimitLabelTableViewCell2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LimitLabelTableViewCell2.h; sourceTree = "<group>"; };
+		9CC67842283E47920009C8E8 /* LimitLabelTableViewCell2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LimitLabelTableViewCell2.m; sourceTree = "<group>"; };
+		9CC67844283E484C0009C8E8 /* LimitLineLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LimitLineLabel.h; sourceTree = "<group>"; };
+		9CC67845283E484C0009C8E8 /* LimitLineLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LimitLineLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +106,14 @@
 				9C91AE9C283A639000C9EF0E /* ViewController.m */,
 				9C91AEAE283A650800C9EF0E /* LimitLabelTableViewCell.h */,
 				9C91AEAF283A650800C9EF0E /* LimitLabelTableViewCell.m */,
+				9CC67841283E47920009C8E8 /* LimitLabelTableViewCell2.h */,
+				9CC67842283E47920009C8E8 /* LimitLabelTableViewCell2.m */,
 				9C91AEB8283A6BC800C9EF0E /* LimitLabelTest1VC.h */,
 				9C91AEB9283A6BC800C9EF0E /* LimitLabelTest1VC.m */,
+				9CC6783E283E45DC0009C8E8 /* LimitLabelTest2VC.h */,
+				9CC6783F283E45DC0009C8E8 /* LimitLabelTest2VC.m */,
+				9CC67844283E484C0009C8E8 /* LimitLineLabel.h */,
+				9CC67845283E484C0009C8E8 /* LimitLineLabel.m */,
 				9C91AE9E283A639000C9EF0E /* Main.storyboard */,
 				9C91AEA1283A639700C9EF0E /* Assets.xcassets */,
 				9C91AEA3283A639700C9EF0E /* LaunchScreen.storyboard */,
@@ -243,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C91AE9D283A639000C9EF0E /* ViewController.m in Sources */,
+				9CC67843283E47920009C8E8 /* LimitLabelTableViewCell2.m in Sources */,
 				9C91AEB7283A67D000C9EF0E /* UILabel+Util.m in Sources */,
 				9C91AEB6283A67D000C9EF0E /* NSString+Util.m in Sources */,
 				9C91AEB0283A650800C9EF0E /* LimitLabelTableViewCell.m in Sources */,
@@ -250,6 +266,8 @@
 				9C91AEA8283A639800C9EF0E /* main.m in Sources */,
 				9C91AE9A283A639000C9EF0E /* SceneDelegate.m in Sources */,
 				9C91AEBA283A6BC800C9EF0E /* LimitLabelTest1VC.m in Sources */,
+				9CC67846283E484C0009C8E8 /* LimitLineLabel.m in Sources */,
+				9CC67840283E45DC0009C8E8 /* LimitLabelTest2VC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
