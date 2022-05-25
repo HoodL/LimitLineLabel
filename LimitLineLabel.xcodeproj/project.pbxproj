@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60BBE8685229560C71B6C9E4 /* Pods_LimitLineLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD8ED0DED45F07F6BF72E76 /* Pods_LimitLineLabel.framework */; };
 		9C91AE97283A639000C9EF0E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C91AE96283A639000C9EF0E /* AppDelegate.m */; };
 		9C91AE9A283A639000C9EF0E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C91AE99283A639000C9EF0E /* SceneDelegate.m */; };
 		9C91AE9D283A639000C9EF0E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C91AE9C283A639000C9EF0E /* ViewController.m */; };
@@ -14,9 +15,16 @@
 		9C91AEA2283A639700C9EF0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C91AEA1283A639700C9EF0E /* Assets.xcassets */; };
 		9C91AEA5283A639700C9EF0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C91AEA3283A639700C9EF0E /* LaunchScreen.storyboard */; };
 		9C91AEA8283A639800C9EF0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C91AEA7283A639800C9EF0E /* main.m */; };
+		9C91AEB0283A650800C9EF0E /* LimitLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C91AEAF283A650800C9EF0E /* LimitLabelTableViewCell.m */; };
+		9C91AEB6283A67D000C9EF0E /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C91AEB3283A67CF00C9EF0E /* NSString+Util.m */; };
+		9C91AEB7283A67D000C9EF0E /* UILabel+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C91AEB5283A67D000C9EF0E /* UILabel+Util.m */; };
+		9C91AEBA283A6BC800C9EF0E /* LimitLabelTest1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C91AEB9283A6BC800C9EF0E /* LimitLabelTest1VC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FD8ED0DED45F07F6BF72E76 /* Pods_LimitLineLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LimitLineLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6208CB0C82489498AD5F04F5 /* Pods-LimitLineLabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LimitLineLabel.debug.xcconfig"; path = "Target Support Files/Pods-LimitLineLabel/Pods-LimitLineLabel.debug.xcconfig"; sourceTree = "<group>"; };
+		8E1CFD4A9BCFB1BC6690AB4D /* Pods-LimitLineLabel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LimitLineLabel.release.xcconfig"; path = "Target Support Files/Pods-LimitLineLabel/Pods-LimitLineLabel.release.xcconfig"; sourceTree = "<group>"; };
 		9C91AE92283A639000C9EF0E /* LimitLineLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LimitLineLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C91AE95283A639000C9EF0E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9C91AE96283A639000C9EF0E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +37,14 @@
 		9C91AEA4283A639700C9EF0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C91AEA6283A639800C9EF0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C91AEA7283A639800C9EF0E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9C91AEAE283A650800C9EF0E /* LimitLabelTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LimitLabelTableViewCell.h; sourceTree = "<group>"; };
+		9C91AEAF283A650800C9EF0E /* LimitLabelTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LimitLabelTableViewCell.m; sourceTree = "<group>"; };
+		9C91AEB2283A67CF00C9EF0E /* NSString+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Util.h"; sourceTree = "<group>"; };
+		9C91AEB3283A67CF00C9EF0E /* NSString+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Util.m"; sourceTree = "<group>"; };
+		9C91AEB4283A67CF00C9EF0E /* UILabel+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Util.h"; sourceTree = "<group>"; };
+		9C91AEB5283A67D000C9EF0E /* UILabel+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Util.m"; sourceTree = "<group>"; };
+		9C91AEB8283A6BC800C9EF0E /* LimitLabelTest1VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LimitLabelTest1VC.h; sourceTree = "<group>"; };
+		9C91AEB9283A6BC800C9EF0E /* LimitLabelTest1VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LimitLabelTest1VC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +52,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60BBE8685229560C71B6C9E4 /* Pods_LimitLineLabel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39AAFD6E29670FA072DAFF37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FD8ED0DED45F07F6BF72E76 /* Pods_LimitLineLabel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9C91AE89283A639000C9EF0E = {
 			isa = PBXGroup;
 			children = (
 				9C91AE94283A639000C9EF0E /* LimitLineLabel */,
 				9C91AE93283A639000C9EF0E /* Products */,
+				9D061340621360B00F23CD1D /* Pods */,
+				39AAFD6E29670FA072DAFF37 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,12 +88,17 @@
 		9C91AE94283A639000C9EF0E /* LimitLineLabel */ = {
 			isa = PBXGroup;
 			children = (
+				9C91AEB1283A67A200C9EF0E /* Util */,
 				9C91AE95283A639000C9EF0E /* AppDelegate.h */,
 				9C91AE96283A639000C9EF0E /* AppDelegate.m */,
 				9C91AE98283A639000C9EF0E /* SceneDelegate.h */,
 				9C91AE99283A639000C9EF0E /* SceneDelegate.m */,
 				9C91AE9B283A639000C9EF0E /* ViewController.h */,
 				9C91AE9C283A639000C9EF0E /* ViewController.m */,
+				9C91AEAE283A650800C9EF0E /* LimitLabelTableViewCell.h */,
+				9C91AEAF283A650800C9EF0E /* LimitLabelTableViewCell.m */,
+				9C91AEB8283A6BC800C9EF0E /* LimitLabelTest1VC.h */,
+				9C91AEB9283A6BC800C9EF0E /* LimitLabelTest1VC.m */,
 				9C91AE9E283A639000C9EF0E /* Main.storyboard */,
 				9C91AEA1283A639700C9EF0E /* Assets.xcassets */,
 				9C91AEA3283A639700C9EF0E /* LaunchScreen.storyboard */,
@@ -76,6 +108,26 @@
 			path = LimitLineLabel;
 			sourceTree = "<group>";
 		};
+		9C91AEB1283A67A200C9EF0E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				9C91AEB2283A67CF00C9EF0E /* NSString+Util.h */,
+				9C91AEB3283A67CF00C9EF0E /* NSString+Util.m */,
+				9C91AEB4283A67CF00C9EF0E /* UILabel+Util.h */,
+				9C91AEB5283A67D000C9EF0E /* UILabel+Util.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		9D061340621360B00F23CD1D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6208CB0C82489498AD5F04F5 /* Pods-LimitLineLabel.debug.xcconfig */,
+				8E1CFD4A9BCFB1BC6690AB4D /* Pods-LimitLineLabel.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C91AEAB283A639800C9EF0E /* Build configuration list for PBXNativeTarget "LimitLineLabel" */;
 			buildPhases = (
+				39872F7CB2FD91180C9E548B /* [CP] Check Pods Manifest.lock */,
 				9C91AE8E283A639000C9EF0E /* Sources */,
 				9C91AE8F283A639000C9EF0E /* Frameworks */,
 				9C91AE90283A639000C9EF0E /* Resources */,
+				98AB0B5AA6112F1EBB76366E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,15 +195,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		39872F7CB2FD91180C9E548B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LimitLineLabel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98AB0B5AA6112F1EBB76366E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LimitLineLabel/Pods-LimitLineLabel-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LimitLineLabel/Pods-LimitLineLabel-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LimitLineLabel/Pods-LimitLineLabel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9C91AE8E283A639000C9EF0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9C91AE9D283A639000C9EF0E /* ViewController.m in Sources */,
+				9C91AEB7283A67D000C9EF0E /* UILabel+Util.m in Sources */,
+				9C91AEB6283A67D000C9EF0E /* NSString+Util.m in Sources */,
+				9C91AEB0283A650800C9EF0E /* LimitLabelTableViewCell.m in Sources */,
 				9C91AE97283A639000C9EF0E /* AppDelegate.m in Sources */,
 				9C91AEA8283A639800C9EF0E /* main.m in Sources */,
 				9C91AE9A283A639000C9EF0E /* SceneDelegate.m in Sources */,
+				9C91AEBA283A6BC800C9EF0E /* LimitLabelTest1VC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +389,7 @@
 		};
 		9C91AEAC283A639800C9EF0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6208CB0C82489498AD5F04F5 /* Pods-LimitLineLabel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -316,6 +417,7 @@
 		};
 		9C91AEAD283A639800C9EF0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E1CFD4A9BCFB1BC6690AB4D /* Pods-LimitLineLabel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
