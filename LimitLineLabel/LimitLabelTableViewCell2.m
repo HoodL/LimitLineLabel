@@ -177,9 +177,10 @@
     if ([UnfoldIndexManager containsIndexPath:self.indexPath]) {
         self.contentLabel.numberOfLines = 0;
         NSLog(@"self.indexPath=%@", NSStringFromCGPoint(CGPointMake(self.indexPath.section, self.indexPath.row)));
+        self.contentLabel.attributedText = [self addFoldImage:text];
     }
     
-    self.contentLabel.attributedText = [self addFoldImage:text];
+    self.contentLabel.attributedText = text;
 }
 
 - (NSMutableAttributedString *)addFoldImage:(NSMutableAttributedString *)content {
