@@ -8,6 +8,7 @@
 #import "LimitLabelTableViewCell2.h"
 #import <YYKit/NSAttributedString+YYText.h>
 #import "Masonry.h"
+#import "UnfoldIndexManager.h"
 
 @interface LimitLabelTableViewCell2 ()
 
@@ -43,6 +44,7 @@
         _contentLabel.userInteractionEnabled = YES;
         _contentLabel.textVerticalAlignment = YYTextVerticalAlignmentTop;
         _contentLabel.preferredMaxLayoutWidth = kScreenWidth - 48;
+        [self addSeeMoreButton:nil];
     }
     return _contentLabel;
 }
@@ -59,12 +61,15 @@
 
     hi.tapAction = ^(UIView *containerView,NSAttributedString *text,NSRange range, CGRect rect) { // 点击全文回调 YYLabel *label = weakSelf.label;
         weakSelf.contentLabel.numberOfLines = 0;
-        [weakSelf.contentLabel sizeToFit];
         UITableView *tableView = (UITableView *)weakSelf.superview;
         NSIndexPath *indexPath = [tableView indexPathForCell:weakSelf];
-        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        [weakSelf.contentView layoutIfNeeded];
-        [weakSelf.contentLabel sizeToFit];
+//        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [UnfoldIndexManager addUnfoldIndex:indexPath];
+
+        [tableView reloadData];
+        //[weakSelf.contentView layoutIfNeeded];
+        //[weakSelf.contentLabel sizeToFit];
+        //[tableView layoutIfNeeded];
 
     };
 
@@ -101,15 +106,19 @@
     _contentLabel.truncationToken = text;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
-        weakSelf.contentLabel.numberOfLines = 0;
-        [weakSelf.contentLabel sizeToFit];
+        //NSLog(@"weakSelf=%p, weakSelf.contentLabel=%p", weakSelf, weakSelf.contentLabel);
+        //weakSelf.contentLabel.numberOfLines = 0;
+        //[weakSelf.contentLabel sizeToFit];
         UITableView *tableView = (UITableView *)weakSelf.superview;
         NSIndexPath *indexPath = [tableView indexPathForCell:weakSelf];
-        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        [weakSelf.contentView layoutIfNeeded];
-        [weakSelf.contentLabel sizeToFit];
-        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        [weakSelf.contentView layoutIfNeeded];
+//        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [UnfoldIndexManager addUnfoldIndex:indexPath];
+        [tableView reloadData];
+//        [weakSelf.contentView layoutIfNeeded];
+//        [weakSelf.contentLabel layoutIfNeeded];
+//        [weakSelf.contentLabel sizeToFit];
+//        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+//        [weakSelf.contentView layoutIfNeeded];
 
     }];
     [imageView addGestureRecognizer:tap];
@@ -162,8 +171,52 @@
     UIFont *font = _contentLabel.font;
     [text appendAttributedString:[[NSAttributedString alloc] initWithString:content attributes:nil]];
     [text addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, content.length)];
-    _contentLabel.attributedText = text;
-    [self addSeeMoreButton:text];
+    
+   // _contentLabel.attributedText = text;
+    //NSLog(@"self=%p, self.contentLabel=%p, self.contentLabel.numOflines=%ld", self, self.contentLabel, self.contentLabel.numberOfLines);
+    if ([UnfoldIndexManager containsIndexPath:self.indexPath]) {
+        self.contentLabel.numberOfLines = 0;
+        NSLog(@"self.indexPath=%@", NSStringFromCGPoint(CGPointMake(self.indexPath.section, self.indexPath.row)));
+    }
+    
+    self.contentLabel.attributedText = [self addFoldImage:text];
+}
+
+- (NSMutableAttributedString *)addFoldImage:(NSMutableAttributedString *)content {
+    YYAnimatedImageView *imageView= [[YYAnimatedImageView alloc] initWithImage:[UIImage systemImageNamed:@"chevron.up"]];
+    imageView.frame = CGRectMake(0, 0, 16, 16);
+    imageView.userInteractionEnabled = YES;
+    
+    NSMutableAttributedString *attachText = [NSMutableAttributedString attachmentStringWithContent:imageView contentMode:UIViewContentModeScaleAspectFit attachmentSize:imageView.frame.size alignToFont:_contentLabel.font alignment:YYTextVerticalAlignmentCenter];
+
+    __weak __typeof(self) weakSelf = self;
+
+    //[attachText setTextHighlight:hi range:NSMakeRange(0, attachText.length)];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
+        //NSLog(@"weakSelf=%p, weakSelf.contentLabel=%p", weakSelf, weakSelf.contentLabel);
+        //weakSelf.contentLabel.numberOfLines = 0;
+        //[weakSelf.contentLabel sizeToFit];
+        UITableView *tableView = (UITableView *)weakSelf.superview;
+        NSIndexPath *indexPath = [tableView indexPathForCell:weakSelf];
+//        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [UnfoldIndexManager removeUnfoldIndex:indexPath];
+        [tableView reloadData];
+//        [weakSelf.contentView layoutIfNeeded];
+//        [weakSelf.contentLabel layoutIfNeeded];
+//        [weakSelf.contentLabel sizeToFit];
+//        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+//        [weakSelf.contentView layoutIfNeeded];
+
+    }];
+    [imageView addGestureRecognizer:tap];
+
+    [content appendAttributedString:attachText];
+    return content;
+}
+
+- (void)prepareForReuse {
+    [super prepareForReuse];
+    self.contentLabel.numberOfLines = 4;
 }
 
 - (void)awakeFromNib {

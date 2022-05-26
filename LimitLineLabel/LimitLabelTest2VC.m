@@ -7,6 +7,7 @@
 
 #import "LimitLabelTest2VC.h"
 #import "LimitLabelTableViewCell2.h"
+#import "UnfoldIndexManager.h"
 
 @interface LimitLabelTest2VC ()
 @property(nonatomic, copy) NSArray *contentArray;
@@ -57,8 +58,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     LimitLabelTableViewCell2 *cell = [tableView dequeueReusableCellWithIdentifier:@"LimitLabelTableViewCell2" forIndexPath:indexPath];
+    cell.indexPath = indexPath;
     [cell bindData:_contentArray[indexPath.row]];
     return cell;
+}
+
+- (void)dealloc {
+    [UnfoldIndexManager resetUnfoldIndexs];
 }
 
 @end

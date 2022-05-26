@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LimitLabelTableViewCell2 : UITableViewCell
 
+@property(nonatomic, strong) NSIndexPath *indexPath;
+
 - (void)bindData:(NSString *)content;
 
 @end
